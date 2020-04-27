@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+             // 获取标签
+            var oIn = document.getElementById('ind');
+            var oA = document.getElementById('ad');
+
+            // 获取 input 标签的属性
+            console.log(oIn.type);
+            console.log(oIn.id);
+            console.log(oIn.className);
+            console.log(oIn.name);
+            console.log(oIn.value);
+            console.log(oIn.placeholder);
+
+            // 获取 a 标签的属性
+            console.log(oA.href);
+            console.log(oA.id);
+            console.log(oA.className);
+
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="ind" class="inc" name="username" value="OK" placeholder="请输入内容">
+    <a href="http://www.baidu.com" id="ad" class="ac">BD</a>
+</body>
+</html>

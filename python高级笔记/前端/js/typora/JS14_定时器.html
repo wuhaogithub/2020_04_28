@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+
+
+    <script>
+        // 定义一个一次性定时器,会返回一个定时器编号 
+        var t = setTimeout(function(){
+            alert('一次性定时器');
+        },2000);
+
+        alert(t);
+        clearTimeout(t);
+
+
+        // 定义一个重性定时器
+        // 实现一个函数
+        var i = 0;
+        function funcInterval(n){
+            alert('重复定时器');  
+            if(i == n){
+                // 当到达次数后,清除定时器
+                clearInterval(t);
+            }
+            i++;
+        }
+
+        t = setInterval(funcInterval,3000,3); 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

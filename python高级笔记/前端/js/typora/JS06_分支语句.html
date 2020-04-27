@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分支语句</title>
+
+    <script>
+        // 判断一个学生的成绩等级
+        var iScore = '-1';
+
+        // 1. if 的三种形式和 python 思想一致
+        // 2. 在写条件时, js中必须 使用圆括号包含
+        // 3. 原来冒号使用花括号代替,只要是代码块都要使用 花括号包含
+        // 4. elif -> else if
+        if(iScore >= 0 && iScore <= 100){
+            if(iScore >= 90){
+                console.log('优秀');
+            }else if(iScore >= 80){
+                console.log('良好');
+            }else if(iScore >= 70){
+                console.log('中等');
+            }else if(iScore >= 60){
+                console.log('及格');
+            }else{
+                console.log('不及格');
+            }
+        }else{
+            console.log('分数不在有效范围内.')
+        }
+
+        
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

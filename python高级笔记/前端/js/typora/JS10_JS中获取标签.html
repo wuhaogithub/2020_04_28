@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 为了解决前面说的问题,利用 window 这个对象有一个事件 onload
+        window.onload = function(){
+            // 这个为事件绑定的匿名函数,就相当于是事件的响应,当事件发生时,就来执行这个匿名函数
+            var oDiv = document.getElementById('div1');
+            // alert(oDiv);
+
+            var p1 = document.getElementById('p1');
+            p1.style.color = 'red';
+
+            var p2 = document.getElementById('p2');
+            p2.style.color = 'blue';
+
+            // 验证在 JS 中, 标签的id名要唯一
+            var p = document.getElementById('p');
+            p.style.color = 'green';
+        };
+    
+    </script>
+    
+</head>
+<body>
+        <div id="div1">这是一个div元素</div>
+
+        <p id="p1">P1AAAAA</p>
+        <p id="p2">P2BBBBB</p>
+        <p id="p">P3CCCCCC</p>
+        <p id="p">P4DDDDDD</p>
+
+</body>
+</html>
+
+<!-- 
+    因为代码执行顺序的关系,导致js在取标签时,标签还没有被渲染,这里取不到标签
+    所以将原来在上面的js代码,放到了下面,这时可以取到
+    但是这种写法不是太好.
+-->
+<!-- <script type="text/javascript">
+    var oDiv = document.getElementById('div1');
+    alert(oDiv);
+</script> -->

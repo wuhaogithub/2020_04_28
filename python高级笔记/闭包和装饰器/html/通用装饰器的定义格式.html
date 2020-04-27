@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>通用装饰器的定义格式</title></head>
+<body><h2>通用装饰器的定义格式</h2>
+<p>格式:</p>
+<pre><code class='language-python' lang='python'>def outer(func):
+    def inner(*args, **kwargs):
+        ret = func(*args, **kwargs)    
+        return ret
+    return inner
+</code></pre>
+<pre><code class='language-python' lang='python'>&#39;&#39;&#39;
+P10_为不同的函数来定义装饰器
+&#39;&#39;&#39;
+
+
+# 下面这个格式就是通用装饰器的定义格式
+def outer(func):
+    def inner(*args, **kwargs):
+        print(&#39;函数调用前的装饰功能代码...&#39;)
+        ret = func(*args, **kwargs)
+        print(&#39;函数调用后的装饰功能代码...&#39;)
+        return ret
+
+    return inner
+
+@outer
+def show1():
+    print(&#39;Show 1 Run....&#39;)
+
+@outer
+def show2(msg):
+    print(&#39;Show 2 Run ... &#39; + msg )
+
+@outer
+def show3():
+    # print(&#39;Show 3 Run ...&#39;)
+    return &#39;Show 3 Ret ...&#39;
+
+
+def show4(msg):
+    print(&#39;Show 4 Run ...&#39; + msg)
+    return &#39;Show 4 Ret ...&#39; + msg
+
+@outer
+def show5(msg,n):
+    print(&#39;Show 5 Run ...&#39; + msg , n)
+    return &#39;Show 5 Ret ...&#39; + msg + str(n)
+
+show1()
+show2(&#39;Hello&#39;)
+ret = show3()
+print(&#39;Show3返回值为:&#39;, ret)
+ret = show4(&#39;World&#39;)
+print(&#39;Show4返回值为:&#39;, ret)
+
+ret = show5(&#39;World&#39;,1000)
+print(&#39;Show5返回值为:&#39;, ret)
+</code></pre>
+</body>
+</html>

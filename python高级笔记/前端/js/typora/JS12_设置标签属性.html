@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--  CSS 样式代码 -->
+    <style>
+        .cs{
+            color: blue;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- JS 脚本代码 -->
+    <script>
+        window.onload = function(){
+            // 获取标签
+            var p1 = document.getElementById('pd1');
+            var p2 = document.getElementById('pd2');
+
+            // 通过属性为标签设置样式
+            p1.style.color = 'red';
+            p2.style.fontSize = '50px';   
+        }
+
+        function changeStyle(){
+            var p1 = document.getElementById('pd1');
+            // 设置类名属性
+            p1.className = 'cs';
+        }
+        
+    </script>
+
+</head>
+<body>
+    
+
+    <p id="pd1" style="color: green">AAAAAAAA</p>
+    <p id="pd2">BBBBBBBB</p >
+    <input type="button" value="换" onclick="changeStyle()">
+
+</body>
+</html>

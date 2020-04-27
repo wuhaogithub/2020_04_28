@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form表单提交</title>
+</head>
+<body>
+
+    <!-- from 表单默认的提交方式是 GET 方式 -->
+    <!-- <form action="http://www.baidu.com" method="get"> -->
+    <form action="http://127.0.0.1:8000" method="post">
+
+
+        <!-- 标注和输入框 -->
+        <label>用户名:</label>
+        <!-- <input type="text" name="username" value="请输入用户名或手机号"> -->
+        <!-- 输入框不需设置 value属性值, 实际输入就是value的值 -->
+        <input type="text" name="username" placeholder="请输入用户名或手机号">
+
+        <label>密码:</label>
+        <input type="password" name="passwd" placeholder="请输入密码">
+        <hr>
+
+        <!-- 单选框 -->
+        <label>性别:</label>
+        <!-- 如果想实现单选,那多个单选值的name应该相同 -->
+        <input type="radio" name="gender" value="1">男
+        <input type="radio" name="gender" value="2">女
+        <hr>
+
+        <!-- 复选框 -->
+        <label>爱好:</label>
+        <input type="checkbox" name="hobby" value="1">读书
+        <input type="checkbox" name="hobby" value="2">写字
+        <input type="checkbox" name="hobby" value="3">睡觉
+        <input type="checkbox" name="hobby" value="4">就是不学习
+        <hr>
+
+        <!-- 下拉框 -->
+        <label>地址:</label>
+        <select name="address">
+            <!-- 所有的下拉选项,需要在这里使用 option 标签来设置 -->
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <option value="4">深圳</option>
+        </select>
+        <hr>
+        <!-- 文件上传 -->
+        <label>照片:</label>
+        <input type="file" name="photo">
+        <hr>
+
+        <!-- 多行文本输入框 -->
+        <label>自我介绍:</label>
+        <textarea name="desc" placeholder="300字以内介绍自己"></textarea>
+        <hr>
+        
+        <!-- 按钮 -->
+        <!-- 提交按钮 -->
+        <input type="submit" value="OK">
+        <!-- 重置按钮 -->
+        <input type="reset" value="Cancel">
+    </form>
+
+
+    
+</body>
+</html>
+
+<!-- 
+    hobby=1&hobby=2&hobby=3&hobby=4
+    l1 = [hobby=1,hobby=2,hobby=3,hobby=4]
+    d = {}
+    for s in l1:
+       l2 = s.split('=')  
+        if l2[0] not in d:
+            d[l2[0]] = l2[1]
+        else:
+            v = d[l2[0]]
+            if isinstance(v, list):
+                # 是列表
+                v.append(l2[1])
+            else:
+                # 不是列表
+                t = d[l2[0]]
+                l3 = [t,l2[1]]
+                d[l2[0]] = l3
+
+{
+   hobby:[1,2,3,4,5,6,6], 
+}
+
+t = 1
+l2[1] = 2
+l3[1, 2]
+ -->

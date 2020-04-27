@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS数组</title>
+
+    <script>
+        // 定义数组
+        // 方式一 实例对象
+        var aArray1 = new Array(1,2,3,4,5);
+        // 方式二 字面量形式
+        var aArray2 = [1,2,3,4,5,'a','b','c'];
+        // 定义二维数组
+        var aArray3 = [[1,2,3],['a','b','c'],['A','B','C']];
+
+        // 显示数组
+        console.log(aArray1);
+        console.log(aArray2);
+        console.log(aArray3);
+
+        // 查看数组的元素个数
+        console.log(aArray1.length);
+        console.log(aArray2.length);
+        console.log(aArray3.length);
+
+        // 通过下下标访问数组的元素
+        console.log(aArray1[0]);
+        console.log(aArray2[5]);
+        console.log(aArray3[2]);
+        console.log(aArray3[2][2]);
+
+        var subArray = aArray3[2];
+        console.log(subArray[2]);
+
+        console.log(aArray1[21]);
+
+        // 通过下标修改数据
+        aArray1[0] = 1111;
+        console.log(aArray1);
+
+        //  追加和弹出数据
+        aArray1.push(6);
+        console.log(aArray1);
+        aArray1.push(0);
+        console.log(aArray1);
+        aArray1.push('A');
+        console.log(aArray1);
+
+        // 弹出数据 
+        aArray1.pop();
+        console.log(aArray1);
+        aArray1.pop();
+        console.log(aArray1);
+        // 弹出数据时,指定的下标无意义,还是弹出最后一个
+        aArray1.pop(0);
+        console.log(aArray1);
+
+        // 数组的插入,替换,删除
+        var aArray = [0,1,2,3,4,5,6,7,8,9,1,1,1,1,1];
+        console.log(aArray);
+
+        // 删除
+        // 从下标3开始删除4个元素
+        // aArray.splice(3,4)
+
+        // 替换数据
+        // 使用一个值替换多个值
+        // aArray.splice(2,8,1);
+        // aArray.splice(2,8,2,2,2,2,2,2);
+
+        // 插入
+        // 插入就是删除0个放进去n个
+        aArray.splice(2,0,2,2,2,2,2,2);
+        console.log(aArray);
+
+
+
+
+
+    
+
+    
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

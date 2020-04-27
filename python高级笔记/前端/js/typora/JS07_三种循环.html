@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS三种循环</title>
+
+    <script>
+        // for 循环
+        /*
+            for(表达式1; 表达式2; 表达式3){
+                循环体
+            }
+           1 表达式1: 设置循环变量初始化
+           2 表达式2: 循环结束条件
+           3 表达式3: 改变循环变量
+           4 循环体
+
+           1->2->4->3->2->4->3 ...
+
+           i++ -> i+=1 -> i=i+1
+        */
+
+        // 求1000内的偶数和
+        var nSum1 = 0;
+        for(var i = 1; i <= 1000; i++){
+            if(i % 2 === 0){
+                nSum1 += i;
+            }
+        }
+        console.log(nSum1);
+
+        var nSum2 = 0;
+        for(var i = 0; i <= 1000; i=i+2){
+                nSum2 += i;  
+        }
+        console.log(nSum2);
+
+        // while 循环
+        /*
+            while(条件){
+                循环体
+            }
+        */
+       var wSum = 0;
+       var i = 0;
+       while(i<=1000){
+           wSum += i;
+           i += 2;
+       }
+       console.log(wSum);
+       
+       var iSum2 = 0;
+        var i = 1;
+        while(i <= 1000){
+
+            if(i % 2 === 0){
+                iSum2 += i;               
+            }                 
+            i += 1;        
+        }
+        console.log(iSum2);
+
+       // do-while 循环
+       /*
+        do{
+            循环体
+        }while(条件);
+       */
+
+       var dwSum = 0;
+       i = 0;
+       do{
+           dwSum += i;
+           i += 2;
+       }while(i <= 1000);
+       console.log(dwSum);
+
+
+
+
+    //   while 和 do-while的区别
+    while(false){
+        console.log('While -----')
+    }
+
+    do{
+        console.log('do-while------');
+    }while(false);
+
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
